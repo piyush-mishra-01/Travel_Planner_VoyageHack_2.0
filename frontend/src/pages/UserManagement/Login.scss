@@ -1,0 +1,111 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+
+  .login-form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    font-family: Arial, sans-serif;
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+      color: #555;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+        padding: 0.8rem;
+        margin-bottom: 1.2rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        outline: none;
+
+      &:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      }
+    }
+
+    .password-field {
+      position: relative;
+
+      .eye-icon {
+        position: absolute;
+        right: 10px;
+        top: 40%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #888;
+      }
+    }
+
+    .forgot-password {
+      text-align: right;
+      margin-bottom: 1rem;
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+        font-size: 0.9rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .login-button {
+      width: 100%;
+      padding: 0.7rem;
+      background-color: #0055a5;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #003d73;
+      }
+    }
+
+    .additional-links {
+      margin-top: 1.5rem;
+      text-align: center;
+
+      p {
+        margin: 0.5rem 0;
+        color: #555;
+      }
+
+      a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      
+    }
+  }
+}
