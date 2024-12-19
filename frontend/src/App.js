@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes instead of Switch
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
@@ -13,6 +13,8 @@ import BookingIntegration from './pages/BookingIntegration/BookingList';
 import RecommendationEngine from './pages/RecommendationEngine/Suggestions';
 import Collaboration from './pages/Collaboration/Chat';
 import Notifications from './pages/Notifications/AlertList';
+import Register from './pages/UserManagement/Register';
+import ForgotPassword from './pages/UserManagement/ForgotPassword';
 
 const App = () => {
   return (
@@ -20,7 +22,7 @@ const App = () => {
       <Navbar />
       <Sidebar />
       <div className="main-content">
-        <Routes> 
+        <Routes>
           <Route path="/user-management" element={<UserManagement />} />
           <Route path="/itinerary-management" element={<ItineraryManagement />} />
           <Route path="/destination-insights" element={<DestinationInsights />} />
@@ -29,6 +31,8 @@ const App = () => {
           <Route path="/recommendation-engine" element={<RecommendationEngine />} />
           <Route path="/collaboration" element={<Collaboration />} />
           <Route path="/notifications" element={<Notifications />} />
+          <Route path="/register" element={<Register />} /> {/* Updated */}
+          <Route path="/forgotpassword" element={<ForgotPassword />} />
         </Routes>
       </div>
       <Footer />

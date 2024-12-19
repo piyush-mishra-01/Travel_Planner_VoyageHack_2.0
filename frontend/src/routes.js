@@ -1,20 +1,31 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { UserManagement, ItineraryManagement, DestinationInsights, BudgetManagement, BookingIntegration, RecommendationEngine, Collaboration, Notifications } from './pages';
+import { Routes, Route } from 'react-router-dom';
+import {
+  UserManagement,
+  ItineraryManagement,
+  DestinationInsights,
+  BudgetManagement,
+  BookingIntegration,
+  RecommendationEngine,
+  Collaboration,
+  Notifications,
+} from './pages';
+import Register from './pages/UserManagement/Register'; // Correct Register import
 
-const Routes = () => {
+const AppRoutes = () => {
   return (
-    <Switch>
-      <Route path="/user-management" component={UserManagement} />
-      <Route path="/itinerary-management" component={ItineraryManagement} />
-      <Route path="/destination-insights" component={DestinationInsights} />
-      <Route path="/budget-management" component={BudgetManagement} />
-      <Route path="/booking-integration" component={BookingIntegration} />
-      <Route path="/recommendation-engine" component={RecommendationEngine} />
-      <Route path="/collaboration" component={Collaboration} />
-      <Route path="/notifications" component={Notifications} />
-    </Switch>
+    <Routes>
+      <Route path="/user-management" element={<UserManagement />} />
+      <Route path="/itinerary-management" element={<ItineraryManagement />} />
+      <Route path="/destination-insights" element={<DestinationInsights />} />
+      <Route path="/budget-management" element={<BudgetManagement />} />
+      <Route path="/booking-integration" element={<BookingIntegration />} />
+      <Route path="/recommendation-engine" element={<RecommendationEngine />} />
+      <Route path="/collaboration" element={<Collaboration />} />
+      <Route path="/notifications" element={<Notifications />} />
+      <Route path="/register" element={<Register />} />
+    </Routes>
   );
 };
 
-export default Routes;
+export default AppRoutes;

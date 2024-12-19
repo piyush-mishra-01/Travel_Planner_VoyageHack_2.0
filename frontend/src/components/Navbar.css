@@ -1,0 +1,74 @@
+/* Navbar container */
+.navbar {
+    background-color: #333; /* Dark background for the navbar */
+    padding: 10px 20px; /* Padding around the navbar */
+    display: flex; /* Use flexbox to arrange items */
+    justify-content: space-between; /* Ensure left and right sections are spaced out */
+    align-items: center; /* Vertically center items */
+    position: sticky; /* Stick navbar to the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Left side: Website name */
+  .navbar-left {
+    flex: 1; /* Allow it to take up available space */
+  }
+  
+  .website-name {
+    color: #fff; /* White text */
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove underline */
+    letter-spacing: 2px; /* Slightly spaced letters */
+  }
+  
+  /* Right side: Navigation links */
+  .navbar-right {
+    display: flex; /* Align links horizontally */
+    gap: 20px; /* Add space between the links */
+  }
+  
+  .navbar-link {
+    color: white; /* Set text color to white */
+    font-size: 16px; /* Adjust font size */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add padding around the links */
+    border-radius: 5px; /* Round the corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+  }
+  
+  /* Hover effect for links */
+  .navbar-link:hover {
+    
+    color: #ff9900; /* Keep text color white */
+    transform: scale(1.1); /* Slightly enlarge the link on hover */
+  }
+  
+  /* Active link */
+  .navbar-link.active {
+    background-color: #ff6600; /* Active link color */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Stack the items vertically */
+    }
+  
+    .navbar-left {
+      margin-bottom: 10px; /* Add space between the website name and links */
+      text-align: center; /* Center the website name */
+    }
+  
+    .navbar-right {
+      flex-direction: column; /* Stack the links vertically */
+      align-items: center; /* Center the links */
+    }
+  
+    .navbar-link {
+      margin-bottom: 10px; /* Add space between links vertically */
+    }
+  }
+  
