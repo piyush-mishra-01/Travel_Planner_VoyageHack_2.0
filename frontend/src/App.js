@@ -1,20 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
-import Footer from './components/Footer';
+import Navbar from './sharedComponents/navbar/Navbar';
+import Sidebar from './components/sidebar/Sidebar';
+import ForgotPassword from './components/auth/forgotPassword/ForgotPassword';
+import Register from './components/auth/register/Register';
+import Footer from './sharedComponents/footer/Footer';
 
 // Corrected imports for the pages based on the folder structure
-import UserManagement from './pages/UserManagement/Login'; // Assuming Login.js is the main entry
-import ItineraryManagement from './pages/ItineraryManagement/ItineraryBuilder';
-import DestinationInsights from './pages/DestinationInsights/DestinationOverview';
-import BudgetManagement from './pages/BudgetManagement/BudgetPlanner';
-import BookingIntegration from './pages/BookingIntegration/BookingList';
-import RecommendationEngine from './pages/RecommendationEngine/Suggestions';
-import Collaboration from './pages/Collaboration/Chat';
-import Notifications from './pages/Notifications/AlertList';
-import Register from './pages/UserManagement/Register';
-import ForgotPassword from './pages/UserManagement/ForgotPassword';
+
 
 const App = () => {
   return (
@@ -23,16 +16,8 @@ const App = () => {
       <Sidebar />
       <div className="main-content">
         <Routes>
-          <Route path="/user-management" element={<UserManagement />} />
-          <Route path="/itinerary-management" element={<ItineraryManagement />} />
-          <Route path="/destination-insights" element={<DestinationInsights />} />
-          <Route path="/budget-management" element={<BudgetManagement />} />
-          <Route path="/booking-integration" element={<BookingIntegration />} />
-          <Route path="/recommendation-engine" element={<RecommendationEngine />} />
-          <Route path="/collaboration" element={<Collaboration />} />
-          <Route path="/notifications" element={<Notifications />} />
-          <Route path="/register" element={<Register />} /> {/* Updated */}
-          <Route path="/forgotpassword" element={<ForgotPassword />} />
+          <Route path="/register" element={<Register/>} /> {/* Updated */}
+          <Route path="/forgotpassword" element={<ForgotPassword/>} />
         </Routes>
       </div>
       <Footer />

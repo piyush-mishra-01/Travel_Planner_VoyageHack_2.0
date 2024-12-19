@@ -1,6 +1,6 @@
 /* Navbar container */
 .navbar {
-    background-color: #333; /* Dark background for the navbar */
+    background-color: #fff; /* Dark background for the navbar */
     padding: 10px 20px; /* Padding around the navbar */
     display: flex; /* Use flexbox to arrange items */
     justify-content: space-between; /* Ensure left and right sections are spaced out */
@@ -17,7 +17,7 @@
   }
   
   .website-name {
-    color: #fff; /* White text */
+    color: orangered; /* White text */
     font-size: 24px; /* Larger font size */
     font-weight: bold; /* Make the text bold */
     text-decoration: none; /* Remove underline */
@@ -31,7 +31,7 @@
   }
   
   .navbar-link {
-    color: white; /* Set text color to white */
+    color: orangered; /* Set text color to white */
     font-size: 16px; /* Adjust font size */
     text-decoration: none; /* Remove underline */
     padding: 10px 15px; /* Add padding around the links */
@@ -42,7 +42,7 @@
   /* Hover effect for links */
   .navbar-link:hover {
     
-    color: #ff9900; /* Keep text color white */
+    color: black; /* Keep text color white */
     transform: scale(1.1); /* Slightly enlarge the link on hover */
   }
   
