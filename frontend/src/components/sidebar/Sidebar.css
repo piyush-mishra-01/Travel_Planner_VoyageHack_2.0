@@ -1,0 +1,69 @@
+/* Sidebar container */
+.sidebar {
+    background-color: #fff; /* Light background for the sidebar */
+    padding: 20px; /* Padding around the sidebar */
+    position: fixed; /* Sidebar stays fixed on the left */
+    top: 0;
+    left: 0;
+    height: calc(100vh - 60px); /* Adjust sidebar height to prevent overlap with footer */
+    width: 250px; /* Sidebar width */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    z-index: 999; /* Ensures it's behind the navbar */
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    justify-content: flex-start; /* Align the content at the top */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+  }
+  
+  /* Sidebar header (website name) */
+  .sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .website-name {
+    color: orangered; /* Matching website color */
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove underline */
+    letter-spacing: 2px; /* Slightly spaced letters */
+  }
+  
+  /* Sidebar links container */
+  .sidebar-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    gap: 15px; /* Space between the links */
+  }
+  
+  /* Sidebar link styles */
+  .sidebar-link {
+    color: orangered; /* Text color for links */
+    font-size: 16px; /* Adjust font size */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Padding for better clickability */
+    border-radius: 5px; /* Rounded corners for the links */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+  }
+  
+  /* Hover effect for links */
+  .sidebar-link:hover {
+    color: black; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the link on hover */
+  }
+  
+  /* Active link style */
+  .sidebar-link.active {
+    background-color: #ff6600; /* Active link color */
+    color: white; /* White text for active link */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%; /* Sidebar takes full width on smaller screens */
+      height: auto; /* Remove fixed height */
+      position: relative; /* Position relative on small screens */
+    }
+  }
+  

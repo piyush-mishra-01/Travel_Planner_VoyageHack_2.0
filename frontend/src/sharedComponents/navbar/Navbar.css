@@ -3,7 +3,7 @@
     background-color: #fff; /* Dark background for the navbar */
     padding: 10px 20px; /* Padding around the navbar */
     display: flex; /* Use flexbox to arrange items */
-    justify-content: space-between; /* Ensure left and right sections are spaced out */
+    justify-content: space-between; 
     align-items: center; /* Vertically center items */
     position: sticky; /* Stick navbar to the top */
     top: 0;

@@ -1,0 +1,126 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110vh; /* Increased height for better spacing */
+  background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Subtle gradient background */
+  padding: 1rem; /* Ensure proper spacing on smaller screens */
+}
+
+.profile-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px; /* Slightly rounder corners */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  width: 100%;
+  max-width: 500px;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+.profile-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  font-size: 1.8rem; /* Larger heading */
+  font-weight: bold;
+}
+
+.profile-picture-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.profile-picture-label {
+  cursor: pointer;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #e3f2fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #007bff;
+  text-align: center;
+}
+
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-picture-placeholder {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #007bff;
+}
+
+.profile-picture-input {
+  display: none;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+  color: #555;
+  font-weight: 600;
+  font-size: 0.95rem; /* Slightly larger font for labels */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 6px; /* Softer corners */
+  font-size: 1rem;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus effects */
+
+  &:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4); /* Stronger focus shadow */
+  }
+
+  &::placeholder {
+    color: #aaa; /* Subtle placeholder color */
+    font-size: 0.9rem;
+  }
+}
+
+.save-button {
+  width: 100%;
+  padding: 0.9rem; /* Larger padding for better clickability */
+  background: linear-gradient(90deg, #0055a5, #007bff); /* Gradient for button */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px; /* Softer corners */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+
+  &:hover {
+    background: linear-gradient(90deg, #003d73, #0055a5); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+
+  &:active {
+    transform: translateY(0); /* Reset lift effect */
+    background: #003d73; /* Active color */
+  }
+}

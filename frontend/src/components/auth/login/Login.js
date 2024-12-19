@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.scss';
 
-const Login = () => {
+const Login = ({ onClose, onRegisterClick,onForgotPasswordClick }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
@@ -49,7 +49,16 @@ const Login = () => {
 
         {/* Forgot Password */}
         <div className="forgot-password">
-          <a href="/forgotpassword">Forgot Password?</a>
+          {/* <a href="/forgotpassword"> */}
+          <span
+            className="forgotpassword-link"
+            onClick={onForgotPasswordClick}
+            role="button"
+           
+          >
+            Forgot Password?
+          </span>
+          {/* </a> */}
         </div>
 
         {/* Submit Button */}
@@ -57,7 +66,14 @@ const Login = () => {
 
         {/* Additional Links */}
         <div className="additional-links">
-          <p>Don’t have an account? <a href="/register">Register with us</a></p>
+          <p>Don’t have an account? </p>
+          <span
+            className="register-link"
+            onClick={onRegisterClick}
+            role="button"
+          >
+            Register with us
+          </span>
         </div>
       </form>
     </div>

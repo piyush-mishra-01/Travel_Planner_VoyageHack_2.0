@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ForgotPassword.scss';
 
-const ForgotPassword = () => {
+const ForgotPassword = ({ onLoginClick }) => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
@@ -37,7 +37,13 @@ const ForgotPassword = () => {
           </form>
         )}
         <div className="back-to-login">
-          <a href="/user-management">Back to Login</a>
+          <span 
+            className="login-link" 
+            onClick={onLoginClick} 
+            role="button"
+          >
+            Back to Login
+          </span>
         </div>
       </div>
     </div>

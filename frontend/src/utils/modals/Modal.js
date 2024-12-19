@@ -1,6 +1,34 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 
+// const StyledCloseButton = styled.button`
+//   background-color: #6c757d; /* Secondary button color */
+//   color: white;
+//   font-size: 16px;
+//   margin-left: 30%;
+//   padding: 10px 60px;
+//   border: none;
+//   border-radius: 5px;
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+
+//   &:hover {
+//     background-color: #5a6268;
+//     transform: translateY(-2px);
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+//   }
+
+//   &:focus {
+//     outline: none;
+//     box-shadow: 0 0 0 3px rgba(108, 117, 125, 0.5);
+//   }
+
+//   &:active {
+//     transform: translateY(0);
+//     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+//   }
+// `;
+
 const ModalContainer = styled.div`
   position: fixed;
   top: 0;
@@ -42,6 +70,7 @@ const CloseButton = styled.button`
   cursor: pointer;
   font-size: 24px;
   color: #666;
+  margin-left:97%;
 `;
 
 const Modal = ({ title, isOpen, onClose, children, width, height }) => {
@@ -78,11 +107,9 @@ const Modal = ({ title, isOpen, onClose, children, width, height }) => {
               <CloseButton onClick={handleClose}>&times;</CloseButton>
             </ModalHeader>
             {children}
-            <div className="text-end mt-5">
-              <button className="btn btn-secondary btn-md" onClick={handleClose}>
-                Close
-              </button>
-            </div>
+            {/* <div className="text-end mt-5">
+            <StyledCloseButton onClick={handleClose}>Close</StyledCloseButton>
+            </div> */}
           </ModalContent>
         </ModalContainer>
       )}
