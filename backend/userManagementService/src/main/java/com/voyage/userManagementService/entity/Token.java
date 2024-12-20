@@ -5,8 +5,6 @@ import com.voyage.userManagementService.enums.TokenType;
 import jakarta.persistence.*;
 import lombok.*;
 
-
-
 @Entity
 @Getter
 @Setter
@@ -15,11 +13,9 @@ import lombok.*;
 @ToString
 public class Token {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
-
 
     @Column(unique = true)
     public String token;
