@@ -55,6 +55,7 @@ public class SecurityConfig {
                         .permitAll()
 
                         .requestMatchers(HttpMethod.POST, "/api/register").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/login").permitAll()
                         // Any other request must be authenticated
                         .anyRequest().authenticated())
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(authenticationEntryPoint))

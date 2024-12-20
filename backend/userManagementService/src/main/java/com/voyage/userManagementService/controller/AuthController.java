@@ -35,7 +35,7 @@ public class AuthController {
         String role = loginDto.getRole().toUpperCase();
         logger.info("User login with role : {} and username or email : {}",role, loginDto.getUsernameOrEmail());
 
-        if (role.equals("ADMIN") || role.equals("EMPLOYEE") || role.equals("CUSTOMER") || role.equals("AGENT")) {
+        if (role.equals("ADMIN") || role.equals("AGENT") || role.equals("TRAVELER")) {
             JWTAuthResponse jwtAuthResponse = authService.login(loginDto);
             return new ResponseEntity<>(jwtAuthResponse, HttpStatus.OK);
         } else throw new UserRelatedException("Invalid Role!. Login With Proper Role.");
