@@ -7,6 +7,7 @@ import Register from './components/auth/register/Register';
 import Footer from './sharedComponents/footer/Footer';
 import Profile from './components/auth/profile/Profile';
 import Login from './components/auth/login/Login';
+import UserHomePage from './components/userHomePage/UserHomePage';
 
 // Corrected imports for the pages based on the folder structure
 
@@ -21,7 +22,7 @@ const App = () => {
           <Route path="/register" element={<Register/>} /> {/* Updated */}
           <Route path="/forgotpassword" element={<ForgotPassword/>} />
           <Route path="/profile" element={<Profile/>} />
-          <Route path="/login" element={<Login/>} />
+          <Route path="/userhomepage" element={<UserHomePage/>} />
           
 
         </Routes>

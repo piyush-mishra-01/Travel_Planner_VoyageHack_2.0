@@ -24,13 +24,15 @@ const Login = ({ onClose, onRegisterClick,onForgotPasswordClick }) => {
 
         {/* Email Input */}
         <label htmlFor="email">Email / Username</label>
+        <div className='user-field'>
         <input
           type="email"
           id="email"
           placeholder="Email/Username"
           value={email}
+          required
           onChange={(e) => setEmail(e.target.value)}
-        />
+        /></div>
 
         {/* Password Input with Toggle */}
         <label htmlFor="password">Password</label>
@@ -39,6 +41,7 @@ const Login = ({ onClose, onRegisterClick,onForgotPasswordClick }) => {
             type={showPassword ? 'text' : 'password'} // Toggle input type
             id="password"
             placeholder="Password"
+            required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -62,7 +65,7 @@ const Login = ({ onClose, onRegisterClick,onForgotPasswordClick }) => {
         </div>
 
         {/* Submit Button */}
-        <button type="submit" className="login-button">Login →</button>
+        <button type="submit" className="login-button"><a href='/userhomepage'>Login →</a></button>
 
         {/* Additional Links */}
         <div className="additional-links">

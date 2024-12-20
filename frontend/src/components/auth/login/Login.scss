@@ -2,24 +2,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
-  background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Subtle gradient background */
-  padding: 1rem; /* Ensure proper spacing on smaller screens */
+  height: 55vh;
+  padding: 1rem;
 
   .login-form {
     background: #ffffff;
-    padding: 2rem;
-    border-radius: 10px; /* Slightly rounder corners */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #ddd; /* Simple border for a card look */
     width: 100%;
     max-width: 400px;
     font-family: 'Roboto', Arial, sans-serif;
 
     h2 {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       color: #333;
       text-align: center;
-      font-size: 1.8rem; /* Larger heading */
+      font-size: 1.5rem;
       font-weight: bold;
     }
 
@@ -27,48 +26,41 @@
       display: block;
       margin: 0.5rem 0 0.2rem;
       color: #555;
+      font-size: 0.9rem;
       font-weight: 600;
-      font-size: 0.95rem; /* Slightly larger font for labels */
     }
 
     input {
       width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1.2rem;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
       border: 1px solid #ccc;
-      border-radius: 6px; /* Softer corners */
-      font-size: 1rem;
-      box-sizing: border-box;
+      border-radius: 4px;
+      font-size: 0.9rem;
       outline: none;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus effects */
-
-      &:focus {
-        border-color: #007bff;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.4); /* Stronger focus shadow */
-      }
 
       &::placeholder {
-        color: #aaa; /* Subtle placeholder color */
-        font-size: 0.9rem;
+        color: #aaa;
       }
+    }
+
+    .user-field{
+      position: relative;
+      margin-right: 20px;
     }
 
     .password-field {
       position: relative;
+      margin-right: 20px;
 
       .eye-icon {
         position: absolute;
-        right: 12px;
+        right: 10px;
         top: 40%;
         transform: translateY(-50%);
         cursor: pointer;
         color: #888;
-        font-size: 1.2rem; /* Larger icon for visibility */
-        transition: color 0.3s ease;
-
-        &:hover {
-          color: #555; /* Darker color on hover */
-        }
+        font-size: 1rem;
       }
     }
 
@@ -76,10 +68,10 @@
       text-align: right;
       margin-bottom: 1rem;
 
-      a {
+      .forgotpassword-link {
         color: #007bff;
-        text-decoration: none;
         font-size: 0.9rem;
+        cursor: pointer;
 
         &:hover {
           text-decoration: underline;
@@ -89,72 +81,36 @@
 
     .login-button {
       width: 100%;
-      padding: 0.9rem; /* Larger padding for better clickability */
-      background: linear-gradient(90deg, #0055a5, #007bff); /* Gradient for button */
+      padding: 0.8rem;
+      background: #007bff;
       color: white;
-      font-size: 1rem;
-      font-weight: bold;
+      font-size: 0.9rem;
       border: none;
-      border-radius: 6px; /* Softer corners */
+      border-radius: 4px;
       cursor: pointer;
-      transition: background 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
 
       &:hover {
-        background: linear-gradient(90deg, #003d73, #0055a5); /* Darker gradient on hover */
-        transform: translateY(-2px); /* Slight lift effect */
+        background: #0056b3; /* Slightly darker on hover */
       }
+    }
 
-      &:active {
-        transform: translateY(0); /* Reset lift effect */
-        background: #003d73; /* Active color */
-      }
-    }
-    .forgot-password {
-      text-align: right;
-      margin-bottom: 1rem;
-    
-      .forgotpassword-link {
-        color: #007bff; /* Blue color */
-        text-decoration: none;
-        font-size: 0.9rem;
-        cursor: pointer;
-        transition: color 0.3s ease;
-    
-        &:hover {
-          text-decoration: underline;
-          color: #0056b3; /* Darker blue on hover */
-        }
-    
-        &:focus {
-          outline: 2px solid lightblue; /* Accessible focus outline */
-        }
-      }
-    }
-    
     .additional-links {
-      margin-top: 1.5rem;
+      margin-top: 1rem;
       text-align: center;
 
       p {
         margin: 0.5rem 0;
         color: #555;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
       }
 
       .register-link {
         color: #007bff;
-        text-decoration: none;
         font-weight: 600;
-        transition: color 0.3s ease;
 
         &:hover {
-          color: #0056b3; /* Darker shade on hover */
           text-decoration: underline;
-          cursor: pointer;
-        }
-
-        &:focus {
-          outline: 2px solid lightblue; /* Accessible focus outline */
+          color: #0056b3;
         }
       }
     }
