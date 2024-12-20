@@ -23,9 +23,12 @@ public class UserProfile {
     @JoinColumn(name = "user_id", referencedColumnName = "id") // Correct column reference
     private User user;
 
-    private String fullName;
+    private String firstname;
+    private String lastname;
 
     private String dateOfBirth;
+
+    private String gender;
 
     private String profilePicture;
 
