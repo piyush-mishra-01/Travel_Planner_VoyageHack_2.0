@@ -1,4 +1,4 @@
 package com.voyage.ItenaryManagementService.service;
 
-public interface ItineraryService {
+public interface PredefinedItineraryActivityService {
 }
